@@ -24,3 +24,19 @@ class Userbc21Form2(forms.ModelForm):
         'departamento':forms.TextInput(attrs={'class': 'form-control mb-3 input-verde', 'placeholder': 'Departamento:'}),
         'municipio':forms.TextInput(attrs={'class': 'form-control mb-3 input-verde', 'placeholder': 'Municipio:'}),
         }
+
+class Userbc21Form(forms.ModelForm):
+    class Meta:
+        model = Userbc21
+        fields = ['nombre', 'email', 'telefono','fecha_nacimiento', 'genero', 'entidad_organizacion', 'cargo', 'departamento', 'municipio']
+        widgets = {
+        'nombre':forms.TextInput(attrs={'class': 'form-control border-radius input-verde', 'placeholder': 'Nombre completo:'}),
+        'email':forms.TextInput(attrs={'class': 'form-control border-radius input-verde', 'placeholder': 'Email:'}),
+        'telefono':forms.TextInput(attrs={'class': 'form-control border-radius input-verde', 'placeholder': 'Teléfono'}),
+        'fecha_nacimiento':forms.TextInput(attrs={'class': 'form-control mb-3 input-verde', 'placeholder': 'Fecha de nacimiento:', 'onfocus':"this.type='date'"}),
+        'genero':forms.Select(attrs={'class': 'form-control mb-3 input-verde', 'placeholder': 'Fecha de nacimiento:'}),
+        'entidad_organizacion':forms.TextInput(attrs={'class': 'form-control mb-3 input-verde', 'placeholder': 'Entidad/Organización:'}),
+        'cargo':forms.TextInput(attrs={'class': 'form-control mb-3 input-verde', 'placeholder': 'Cargo:'}),
+        'departamento':forms.TextInput(attrs={'class': 'form-control mb-3 input-verde', 'placeholder': 'Departamento:'}),
+        'municipio':forms.TextInput(attrs={'class': 'form-control mb-3 input-verde', 'placeholder': 'Municipio:'}),
+        }
