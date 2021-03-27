@@ -1,0 +1,5 @@
+db.sqlite3 
+
+biocarb21\__pycache__\**
+
+**\biocarb21\migrations\**
