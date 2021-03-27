@@ -6,16 +6,13 @@ from .forms import Userbc21Form1, Userbc21Form2
 
 def registrate(request):
     if request.method == "POST":
-        form = Userbc21Form1(request.POST)
-        if form.is_valid():
-            user = form.save()
-            return redirect('registrate-2', user.id)
-    else:
-        form = Userbc21Form1()
-    context = {'form': form}
-    return render(request, 'biocarb21\\registrate.html', context)
+        nombre = request.POST['nombre']
+        email = request.POST['email']
+        telefono = request.POST['telefono']
+        return redirect('registrate-2', nombre, email, telefono)
+    return render(request, 'biocarb21\\registrate.html')
 
-def registrate_2(request, user_id):
+def registrate_2(request, nombre, email, telefono):
     user = Userbc21.objects.get(id = user_id)
     if request.method == "POST":
         form = Userbc21Form2(request.POST, instance = user)

@@ -13,9 +13,9 @@ class Userbc21(models.Model):
         ('O', 'Otro'),
     )
     #id = models.BigAutoField(primary_key=True)
-    nombre = models.CharField(max_length = 50)
-    email = models.CharField(max_length = 50)
-    telefono = models.CharField(max_length = 20)
+    nombre = models.CharField(blank=True, null=True, max_length = 50)
+    email = models.CharField(blank=True, null=True, max_length = 50)
+    telefono = models.CharField(blank=True, null=True, max_length = 20)
     fecha_nacimiento = models.DateField(blank=True, null=True)
     genero = models.CharField(blank=True, null=True, max_length=1, choices=GENERO)
     entidad_organizacion = models.CharField(blank=True,null=True, max_length = 50)
