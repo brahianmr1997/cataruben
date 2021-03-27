@@ -20,14 +20,14 @@ def registrate_2(request, nombre, email, telefono):
             form.save().email = email
             form.save().telefono = telefono
             form.save()
-            return redirect('registrate-exito')
+            return redirect('registrate-exito', email)
     else:
         form = Userbc21Form2()
     context = {'form' : form}
     return render(request, 'biocarb21\\registrate-2.html', context)
 
-def registrate_exito(request, user_id):
-    user = Userbc21.objects.get(id = user_id)
+def registrate_exito(request, email):
+    print(email)
     return render(request, 'biocarb21\\registrate-exito.html')#, context
 
 
