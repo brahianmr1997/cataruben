@@ -13,7 +13,7 @@ class Userbc21Form1(forms.ModelForm):
 class Userbc21Form2(forms.ModelForm):
     class Meta:
         model = Userbc21
-        fields = ['fecha_nacimiento', 'genero', 'entidad_organizacion', 'cargo', 'departamento', 'municipio']
+        fields = ['nombre', 'email', 'telefono', 'fecha_nacimiento', 'genero', 'entidad_organizacion', 'cargo', 'departamento', 'municipio']
         #widgets = {'fecha_nacimiento': forms.DateInput(format=('%m/%d/%Y'), attrs={'class':'form-control', 'placeholder':'Select a date', 'type':'date'}),}
         #'fecha_nacimiento':forms.SelectDateWidget(years=range(1900,2021)),
         widgets = {

@@ -13,14 +13,16 @@ def registrate(request):
     return render(request, 'biocarb21\\registrate.html')
 
 def registrate_2(request, nombre, email, telefono):
-    user = Userbc21.objects.get(id = user_id)
     if request.method == "POST":
-        form = Userbc21Form2(request.POST, instance = user)
+        form = Userbc21Form2(request.POST)
         if form.is_valid():
+            form.save().nombre = nombre
+            form.save().email = email
+            form.save().telefono = telefono
             form.save()
-            return redirect('registrate-exito', user.id)
+            return redirect('registrate-exito')
     else:
-        form = Userbc21Form2(instance = user)
+        form = Userbc21Form2()
     context = {'form' : form}
     return render(request, 'biocarb21\\registrate-2.html', context)
 
