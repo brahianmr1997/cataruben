@@ -1,8 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Userbc21
-from .forms import Userbc21Form1, Userbc21Form2
-
-
+from .forms import Userbc21Form
 
 def registrate(request):
     if request.method == "POST":
@@ -14,7 +12,7 @@ def registrate(request):
 
 def registrate_2(request, nombre, email, telefono):
     if request.method == "POST":
-        form = Userbc21Form2(request.POST)
+        form = Userbc21Form(request.POST)
         if form.is_valid():
             form.save().nombre = nombre
             form.save().email = email
@@ -22,14 +20,10 @@ def registrate_2(request, nombre, email, telefono):
             form.save()
             return redirect('registrate-exito', email)
     else:
-        form = Userbc21Form2()
+        form = Userbc21Form()
     context = {'form' : form}
     return render(request, 'biocarb21\\registrate-2.html', context)
 
 def registrate_exito(request, email):
     print(email)
     return render(request, 'biocarb21\\registrate-exito.html')#, context
-
-
-
-
