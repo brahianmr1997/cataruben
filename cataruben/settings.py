@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'biocarb21',
+    'mapjs',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

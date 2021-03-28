@@ -1,5 +1,13 @@
 db.sqlite3 
 
 biocarb21/__pycache__/**
-
 biocarb21/migrations/**
+biocarb21/__init__.py
+
+mapjs/__pycache__/**
+mapjs/migrations/**
+mapjs/__init__.py
+
+mappy/__pycache__/**
+mappy/migrations/**
+mappy/__init__.py

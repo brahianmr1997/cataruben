@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("biodiversidad-carbono-2021/", include("biocarb21.urls"))
+    path("biodiversidad-carbono-2021/", include("biocarb21.urls")),
+    path("mapjs/", include("mapjs.urls")),
 ]
