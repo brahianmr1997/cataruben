@@ -6,7 +6,7 @@ def registrate(request):
     if request.method == "POST":
         nombre = request.POST['nombre']
         email = request.POST['email']
-        telefono = request.POST['telefono']
+        telefono = '+'+request.POST['countryCode']+request.POST['telefono']
         return redirect('registrate-2', nombre, email, telefono)
     return render(request, 'biocarb21\\registrate.html')
 

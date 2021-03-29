@@ -8,10 +8,10 @@ var circle = L.circle([4.38, -74.09], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
-    radius: 5000
+    radius: 50000
 }).addTo(mapa).bindPopup("I am a circle.");
 
-var marker = L.marker([4, -72.09]).addTo(mapa).bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup()
+var marker = L.marker([4, -69.09]).addTo(mapa).bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup()
 
 var polygon = L.polygon([
     [4 , -72],
