@@ -11,12 +11,25 @@
     crossorigin=""/>
 </head>
 <body>
+    
+    
     <div id="mapa" style="height: 500px; width: 500px;"></div>
+    
     <script src="{% static '\js\colombia.geo.js' %}"></script>
+    
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
-    <script src="{% static '/js/mapa.js' %}"></script>
+    
+    <script src="{% static '/js/mapa.js' %}">;</script>
+
+    <script> 
+ 
+        document.getElementById("ciudad").innerHTML = "{{ciudad}}";
+        document.getElementById("intro").innerHTML = "{{intro}}";
+        document.getElementById("img").src = "{{img}}";
+        
+    </script>
 </body>
 </html>
 

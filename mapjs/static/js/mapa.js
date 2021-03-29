@@ -5,11 +5,9 @@ var mapa = L.map('mapa').setView([4.38, -74.09], 5)
 L.tileLayer(tilesProvider,{maZoom:18,}).addTo(mapa)
 
 
-
-
 var cali = L.marker([3.45, -76.533])
             .addTo(mapa)
-            .bindPopup("<h1>Cali</h1><p>Capital valle del cauca</p> <img src='http://www.institutocanzion.com.co/wp-content/uploads/2019/02/CALI.jpg' width='180' height='75'> ")
+            .bindPopup("<p id='ciudad'></p><p id='intro'></p> <img id='img' width='107' height='98'></img>")
             .openPopup()
 
 
